@@ -13,7 +13,13 @@ ul {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
 
@@ -40,6 +46,7 @@ img {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -62,7 +69,7 @@ img {
     color: #4d5ae5;
 }
 
- /* Hero styles */
+/* Hero styles */
 
 .hero {
     background-color: #2e2f42;
@@ -77,13 +84,13 @@ img {
 }
 
 .hero .container {
-    display: flex; /* Використовуємо Flexbox для розташування внутрішнього контенту у колонку */
-    flex-direction: column; /* Напрямок розташування елементів вертикальний (зверху вниз) */
-    align-items: center; /* Вирівнювання елементів по центру вздовж поперечної осі (горизонтально) */
-    justify-content: center; /* Вирівнювання елементів по головній осі (вертикально), щоб центровано у блоці */
-    width: 1158px; /* Фіксована ширина контейнера 1158px */
-    margin: 0 auto; /* Центрування контейнера на сторінці горизонтально */
-    padding: 0 15px; /* Внутрішні відступи зліва і справа 15px, щоб контент не прилипав до країв */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .hero-title {
@@ -104,13 +111,18 @@ img {
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #4d5ae5;
-    cursor: pointer; /* Курсор змінюється на "руку" при наведенні, показуючи, що кнопка клікабельна */
-    padding: 16px 32px; /* Внутрішні відступи кнопки: 16px зверху/знизу і 32px зліва/справа */
-    margin: 0 auto; /* Центрування кнопки всередині контейнера */
-    border-radius: 4px; /* Закруглення кутів кнопки 4px */
-    min-width: 169px; /* Мінімальна ширина кнопки: 169px, щоб вона не була занадто вузькою */
+    cursor: pointer;
+    padding: 16px 32px;
+    margin: 0 auto;
+    border-radius: 4px;
+    min-width: 169px;
     height: 56px;
-    border: none; /* Прибираємо стандартну рамку браузера */
+    border: none;
+}
+
+.order-button {
+    /* ... інші стилі кнопки ... */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -149,20 +161,23 @@ img {
 }
 
 .sections-list {
-    display: flex; /* Використовуємо Flexbox для розташування контактів в рядок */
+    display: flex;
+    /* Використовуємо Flexbox для розташування контактів в рядок */
     gap: 24px;
-    list-style-type: none; /* прибирає стандартні маркери списку */
+    list-style-type: none;
+    /* прибирає стандартні маркери списку */
 }
 
 .sections-list .section-icon {
     border: 1px solid #8e8f99;
-border-radius: 4px;
-width: 264px;
-height: 112px;
-display: flex;
-align-items: center;
-justify-content: center;
-background: #f4f4fd;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4fd;
+    margin-bottom: 8px;
 }
 
 .section-title {
@@ -176,9 +191,10 @@ background: #f4f4fd;
 }
 
 .section-item {
-    display: block; /* Відображення як блочний елемент, щоб весь блок був клікабельним */
+    display: block;
     width: calc((100% - 3*24px) / 3);
 }
+
 .section-text {
     font-weight: 400;
     font-size: 16px;
@@ -235,24 +251,24 @@ background: #f4f4fd;
 
 
 .contacts {
-    margin-left: auto; /* відсуває елемент вправо всередині батьківського контейнера */
+    margin-left: auto;
     font-style: normal;
 }
 
 .contacts-list {
-    display: flex; /* Використовуємо Flexbox для розташування контактів в рядок */
-    align-items: center; /* Вирівнювання елементів по центру вздовж поперечної осі (вертикально) */
-    gap: 40px; /* Відстань між контактними елементами 40px */
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .contacts-link {
-    display: block; /* Відображення як блочний елемент, щоб весь блок був клікабельним */
-    padding: 24px 0; /* Внутрішні відступи зверху і знизу: 24px для зручного натискання */
+    display: block;
+    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавна зміна кольору при наведенні */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -260,77 +276,49 @@ background: #f4f4fd;
     color: #404bbf;
 }
 
-/* Footer styles */
-
-.page-footer {
-    background-color: #2e2f42;
-    padding: 100px 0;
-}
-
-.footer-link {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase; /* робимо весь текст великими літерами */
-    color: #4d5ae5;
-    display: inline-block; /* робить посилання "блочним" */
-    margin-bottom: 16px;   /* відступ між посиланням і параграфом */
-}
-
-.footer-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    max-width: 264px; /* Максимальна ширина тексту 264px, щоб абзац не був занадто широким */
-    max-width: 264px;      /* максимальна ширина тексту */
-}
-
 .team-section {
     background-color: #f4f4fd;
-    padding: 120px 0; /* Внутрішні відступи зверху і знизу: по 120px для створення великого простору навколо контенту */
+    padding: 120px 0;
+    /* Внутрішні відступи зверху і знизу: по 120px для створення великого простору навколо контенту */
 }
 
 .team-hero {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: 0.02em; /* Інтервал між літерами трохи ширший для кращого сприйняття */
-    text-align: center; /* Вирівнювання тексту по центру блоку */
+    letter-spacing: 0.02em;
+    text-align: center;
     color: #2e2f42;
-    text-transform: capitalize; /* Перетворює першу букву кожного слова на велику */
-    margin-bottom: 72px; /* Великий відступ знизу: 72px відокремлює заголовок від наступного контенту */
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .team-title {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2; /* Висота рядка: 1.2 забезпечує зручну відстань між рядками тексту */
-    letter-spacing: 0.02em; /* Інтервал між літерами трохи більший, для естетики */
-    text-align: center; /* Вирівнювання тексту по центру блоку */
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
     color: #2e2f42;
-    margin-bottom: 8px; /* Відступ знизу 8px створює простір між заголовком і описом */
+    margin-bottom: 8px;
 }
 
 
 .team-text {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5; /* Висота рядка: 1.5 забезпечує зручну відстань між рядками тексту */
-    letter-spacing: 0.02em; /* Інтервал між літерами трохи більший, для естетики */
-    text-align: center; /* Вирівнювання тексту по центру блоку */
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
     color: #434455;
     margin-bottom: 8px;
 }
 
 .team-list {
-    display: flex; /* Використовуємо Flexbox для розташування елементів у рядок */
-    gap: 24px; /* Відстань між елементами 24px */
-    justify-content: center; /* Центруємо елементи горизонтально всередині контейнера */
-    margin-bottom: 120px; /* Відступ знизу 120px, щоб створити простір між цим блоком і наступними елементами */
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 120px;
 }
 
 
@@ -341,17 +329,17 @@ background: #f4f4fd;
 }
 
 
- /* Базова ширина елемента у flex-контейнері:
+/* Базова ширина елемента у flex-контейнері:
 100% - загальна ширина проміжків (3 * 24px), ділимо на 4 елементи,
 щоб чотири елементи рівномірно розташовувалися в рядку */
 /* Тіні для елемента: додають легкий обєм і відокремлюють від фону */
 .team-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
     background-color: #fff;
-    border-radius: 4px; /* Закруглені кути елемента радіусом 4px */
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), /* основна легка тінь знизу */
-                0px 1px 1px rgba(46, 47, 66, 0.16), /* додаткова тінь для глибини */
-                0px 1px 6px rgba(46, 47, 66, 0.08); /* розсіяна тінь для мякого ефекту */
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .team-decor {
@@ -359,50 +347,89 @@ background: #f4f4fd;
 }
 
 .social-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
 
 .social-item {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
-  background-color: #404bbf; /* Наприклад, інший відтінок */
+    background-color: #404bbf;
+    /* Наприклад, інший відтінок */
 }
 
 .social-icon {
-  width: 16px;
-  height: 16px;
-  fill: #f4f4fd; /* колір іконки */
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 16px;
+    height: 16px;
+    fill: #f4f4fd;
+    /* колір іконки */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
-  fill: #ffffff;
+    fill: #ffffff;
 }
+
 /* Внутрішні відступи зверху і знизу по 120px
 для створення великого простору навколо секції портфоліо */
 .portfolio-section {
     padding: 120px 0;
 }
-.portfolio-list .portfolio-description {
+
+.portfolio-hero {
+    color: #2e2f42;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.portfolio-item {
+    flex-basis: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-description {
     padding: 40px 32px;
     background-color: #4d5ae5;
     font-weight: 400;
@@ -416,61 +443,118 @@ background: #f4f4fd;
     top: 0;
     left: 0;
     transform: translateY(100%);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function:
-    cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list .portfolio-item:hover .portfolio-description {
+
+.portfolio-item:hover .portfolio-description {
     transform: translateY(0);
-}
-.portfolio-hero {
-    color: #2e2f42;
-    font-size: 36px;
-    line-height: 1.11; /* Висота рядка 1.11 компактне вертикальне розташування тексту заголовка */
-    letter-spacing: 0.02em; /* Інтервал між літерами трохи більший, для естетики */
-    text-transform: capitalize; /* Перетворює першу букву кожного слова на велику */
-    text-align: center; /* Вирівнювання тексту по центру контейнера */
-    margin-bottom: 72px; /* Великий відступ знизу 72px відокремлює заголовок від наступного блоку */
-}
-
-.portfolio-list {
-    display: flex; /* Включаємо Flexbox для розташування елементів у рядок або стовпці */
-    flex-wrap: wrap; /* Дозволяє елементам переноситися на наступний рядок, якщо не вистачає місця */
-    column-gap: 24px; /* Відстань між колонками (горизонтальний gap) */
-    row-gap: 48px; /* Відстань між рядками (вертикальний gap) */
-    list-style-type: none; /* Прибирає стандартні маркери списку, оскільки це ul або ol */
-    align-items: center; /* Вирівнює елементи по центру вздовж поперечної осі flex-контейнера */
-}
-
-
-/* Базова ширина елемента у flex-контейнері.
-       Використовується формула calc, щоб три елементи поміщалися в рядку з відступами.
-       100% загальна ширина контейнера,
-       48px сумарний простір між елементами (наприклад, gap),
-       ділимо на 3, щоб отримати ширину одного елемента. */
-.portfolio-item {
-    flex-basis: calc((100% - 48px) / 3);
 }
 
 .portfolio-decor {
-    padding: 32px 16px; /* Внутрішні відступи: 32px зверху і знизу, 16px зліва і справа */
-    border:  1px solid #e7e9fc; /* Рамка навколо елемента: 1px, світло-синьо-сіра для візуального розділення */
-    border-top: none; /* Прибираємо верхню межу, щоб рамка не зливалася з попереднім елементом */
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
+
 .portfolio-title {
-    font-weight: 500; /* Вага шрифту: 500 трохи жирніший за нормальний, щоб виділяти заголовок */
-    line-height: 1.2; /* Висота рядка */
-    letter-spacing: 0.02em; /* Інтервал між літерами */
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: #2e2f42;
-    text-transform: capitalize; /* Перетворення тексту: перша буква кожного слова великою */
-    margin-bottom: 8px; /* Відступ знизу 8px створює простір між заголовком і наступним елементом */
+    text-transform: capitalize;
+    margin-bottom: 8px;
 }
 
 .portfolio-text {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;  /* Висота рядка */
-    letter-spacing: 0.02em; /* Інтервал між літерами */
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     color: #434455;
+}
+
+/* Footer styles */
+.page-footer {
+    background-color: #2e2f42;
+    padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-block-one {
+    margin-right: 120px;
+}
+
+.footer-link {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-link .logo-part {
+    color: #f4f4fd;
+}
+
+.footer-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    max-width: 264px;
+}
+
+.footer-block-two {
+    margin-right: 80px;
+    /* Можливо, цей відступ не потрібен, якщо немає інших елементів */
+}
+
+.social-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.social-list-footer {
+    display: flex;
+    justify-content: center;
+    /* Вирівнювання іконок по центру */
+    gap: 16px;
+}
+
+.social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #31d0aa;
+}
+
+.social-icon {
+    fill: #f4f4fd;
 }
