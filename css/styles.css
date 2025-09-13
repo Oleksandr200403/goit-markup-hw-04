@@ -163,10 +163,21 @@ img {
     background-position: center;
 }
 
+/* Контейнер лише для hero */
 .hero-section {
     max-width: 1440px;
+    /* ширина тільки для hero */
     margin: 0 auto;
+    /* центрування */
     padding: 0 15px;
+    /* внутрішні відступи */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,6 +215,19 @@ img {
 .order-button:hover,
 .order-button:focus {
     background-color: var(--primary-hover-color);
+}
+
+/* ==== Відміняємо hover/focus на іконках у hero ==== */
+.hero .social-link:hover,
+.hero .social-link:focus {
+    background-color: var(--primary-color);
+    /* залишаємо колір без зміни */
+}
+
+.hero .social-link:hover .social-icon,
+.hero .social-link:focus .social-icon {
+    fill: var(--icon-color);
+    /* колір не змінюється при hover/focus */
 }
 
 /* ========= Features ========= */
@@ -263,7 +287,6 @@ img {
     color: var(--text-color);
 }
 
-/* ========= Team ========= */
 /* ========= Team ========= */
 .team-section {
     background-color: var(--light-color);
