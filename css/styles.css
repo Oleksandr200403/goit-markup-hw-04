@@ -17,7 +17,6 @@ body {
     background-color: #fff;
 }
 
-/* Reset */
 ul {
     list-style-type: none;
     margin: 0;
@@ -41,7 +40,6 @@ img {
     height: auto;
 }
 
-/* Common */
 .container {
     max-width: 1158px;
     padding: 0 15px;
