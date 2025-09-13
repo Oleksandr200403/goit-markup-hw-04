@@ -27,9 +27,6 @@ ul {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
     margin: 0;
 }
@@ -49,6 +46,19 @@ img {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* ========= Header ========= */
@@ -122,7 +132,7 @@ img {
 
 .nav-link:hover,
 .nav-link:focus,
-.nav-link.nav-link.current {
+.nav-link.current {
     color: var(--primary-hover-color);
 }
 
@@ -161,23 +171,11 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-/* Контейнер лише для hero */
-.hero-section {
     max-width: 1440px;
-    /* ширина тільки для hero */
     margin: 0 auto;
-    /* центрування */
-    padding: 0 15px;
-    /* внутрішні відступи */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.hero .container {
+.hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,35 +215,9 @@ img {
     background-color: var(--primary-hover-color);
 }
 
-/* ==== Відміняємо hover/focus на іконках у hero ==== */
-.hero .social-link:hover,
-.hero .social-link:focus {
-    background-color: var(--primary-color);
-    /* залишаємо колір без зміни */
-}
-
-.hero .social-link:hover .social-icon,
-.hero .social-link:focus .social-icon {
-    fill: var(--icon-color);
-    /* колір не змінюється при hover/focus */
-}
-
 /* ========= Features ========= */
 .features-section {
     padding: 120px 0;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 
 .sections-list {
@@ -254,7 +226,6 @@ img {
 }
 
 .sections-list .section-icon {
-    border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
     height: 112px;
@@ -275,7 +246,6 @@ img {
 }
 
 .section-item {
-    display: block;
     width: calc((100% - 3 * 24px) / 4);
 }
 
@@ -293,7 +263,6 @@ img {
     padding: 120px 0;
 }
 
-/* Заголовок секції */
 .team-hero {
     font-weight: 700;
     font-size: 36px;
@@ -305,34 +274,24 @@ img {
     margin-bottom: 72px;
 }
 
-/* Список команди */
 .team-list {
     display: flex;
     gap: 24px;
     justify-content: center;
-    margin-bottom: 120px;
 }
 
-/* Елементи команди */
 .team-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-/* Перший елемент команди - радіус нижніх кутів */
-.team-item:first-child {
-    border-radius: 0px 0px 4px 4px;
 }
 
 .team-decor {
     padding: 32px 0;
 }
 
-/* Назва та позиція */
 .team-title {
     font-weight: 500;
     font-size: 20px;
@@ -353,7 +312,6 @@ img {
     margin-bottom: 8px;
 }
 
-/* Соцмережі */
 .social-list {
     display: flex;
     justify-content: center;
@@ -366,7 +324,6 @@ img {
     height: 40px;
 }
 
-/* Посилання на соцмережі */
 .social-link {
     display: flex;
     justify-content: center;
@@ -383,10 +340,8 @@ img {
     background-color: var(--primary-hover-color);
 }
 
-/* SVG іконки - колір через змінну */
 .social-icon {
     fill: var(--icon-color);
-    /* використання CSS-змінної #f4f4fd */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -394,6 +349,7 @@ img {
 .social-link:focus .social-icon {
     fill: var(--icon-hover-color);
 }
+
 /* ========= Portfolio ========= */
 .portfolio-section {
     padding: 120px 0;
@@ -477,7 +433,6 @@ img {
     color: var(--text-color);
 }
 
-
 /* ================ Footer ================ */
 .footer {
     background-color: #2e2f42;
@@ -493,14 +448,7 @@ img {
     margin-right: 120px;
 }
 
-.logo {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+.footer .logo {
     display: inline-block;
     margin-bottom: 16px;
 }
@@ -550,11 +498,9 @@ img {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background-color: #31d0aa;
+    background-color: var(--footer-hover-color);
 }
 
 .footer-icon {
     fill: #f4f4fd;
 }
-
-/* ================ /Footer ================ */
