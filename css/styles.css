@@ -232,6 +232,7 @@ img {
     justify-content: center;
     background: var(--light-color);
     margin-bottom: 8px;
+    border: 1px solid #8e8f99;
 }
 
 .section-title {
