@@ -163,10 +163,10 @@ img {
     background-position: center;
 }
 
-.hero .container {
+.hero-section {
     max-width: 1440px;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -264,11 +264,13 @@ img {
 }
 
 /* ========= Team ========= */
+/* ========= Team ========= */
 .team-section {
     background-color: var(--light-color);
     padding: 120px 0;
 }
 
+/* Заголовок секції */
 .team-hero {
     font-weight: 700;
     font-size: 36px;
@@ -280,6 +282,34 @@ img {
     margin-bottom: 72px;
 }
 
+/* Список команди */
+.team-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+/* Елементи команди */
+.team-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+/* Перший елемент команди - радіус нижніх кутів */
+.team-item:first-child {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-decor {
+    padding: 32px 0;
+}
+
+/* Назва та позиція */
 .team-title {
     font-weight: 500;
     font-size: 20px;
@@ -300,37 +330,7 @@ img {
     margin-bottom: 8px;
 }
 
-.team-list {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    margin-bottom: 120px;
-}
-
-.team-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-/* Додано для першого елемента списку */
-.team-list .team-item:first-child {
-    border-radius: 0px 0px 4px 4px;
-    /* верхні кути 0, нижні 4px */
-}
-
-.team-item:first-child .social-icon {
-    fill: var(--icon-color);
-    /* колір іконки через CSS-змінну */
-}
-
-.team-decor {
-    padding: 32px 0;
-}
-
+/* Соцмережі */
 .social-list {
     display: flex;
     justify-content: center;
@@ -343,6 +343,7 @@ img {
     height: 40px;
 }
 
+/* Посилання на соцмережі */
 .social-link {
     display: flex;
     justify-content: center;
@@ -359,8 +360,10 @@ img {
     background-color: var(--primary-hover-color);
 }
 
+/* SVG іконки - колір через змінну */
 .social-icon {
     fill: var(--icon-color);
+    /* використання CSS-змінної #f4f4fd */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -368,7 +371,6 @@ img {
 .social-link:focus .social-icon {
     fill: var(--icon-hover-color);
 }
-
 /* ========= Portfolio ========= */
 .portfolio-section {
     padding: 120px 0;
